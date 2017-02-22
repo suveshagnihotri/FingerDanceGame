@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FingerDance</string>
+
+
+    <string name="rule_1"> 1.The board contains n*n different colored F(Finomena) tiles .</string>
+    <string name="rule_2"> 2. At the start, the user selects the value of N .</string>
+    <string name="rule_3"> 3. The game starts with a random F-tile highlighted .</string>
+    <string name="rule_4"> 4.The player would touch and hold the highlighted F-tile, after that next random tile would automatically get highlighted.</string>
+    <string name="rule_5"> 5. The 2nd player would touch and hold the next highlighted tile .</string>
+
+
+</resources>
