@@ -42,7 +42,7 @@ public class StartActivity extends AppCompatActivity {
     @OnClick(R.id.ll_submit)
      void navigateToStartGame(){
         if(etSize.getText()!=null && player1.getText()!=null && player2.getText()!=null){
-            if(Integer.valueOf(etSize.getText().toString())>= 10){
+            if(!etSize.getText().equals("") || Integer.valueOf(etSize.getText().toString())>= 10){
                 Toast.makeText(StartActivity.this,"Please Enter Size of Matrix",Toast.LENGTH_SHORT).show();
             }else {
                 Intent in = new Intent(StartActivity.this, MainActivity.class);
