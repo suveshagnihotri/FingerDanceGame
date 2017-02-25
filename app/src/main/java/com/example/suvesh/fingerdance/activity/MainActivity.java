@@ -205,12 +205,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         }
         return true;
     }
-
-
-
-
-
-
+    //BottomSheet Dialog
     private void createDialog() {
         if (dismissDialog()) {
             return;

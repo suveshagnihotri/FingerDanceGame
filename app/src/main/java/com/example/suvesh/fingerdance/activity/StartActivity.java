@@ -40,20 +40,22 @@ public class StartActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.ll_submit)
-     void navigateToStartGame(){
-        if(etSize.getText()!=null && player1.getText()!=null && player2.getText()!=null){
-            if(!etSize.getText().equals("") || Integer.valueOf(etSize.getText().toString())>= 10){
-                Toast.makeText(StartActivity.this,"Please Enter Size of Matrix",Toast.LENGTH_SHORT).show();
-            }else {
+    void navigateToStartGame() {
+        if (etSize.getText().toString().trim() != null && !etSize.getText().toString().toString().equalsIgnoreCase("") && Integer.parseInt(etSize.getText().toString()) < 10) {
+            if (player1.getText().toString().trim() != null && !player1.getText().toString().equalsIgnoreCase("")
+                    && player2.getText().toString().trim() != null && !player2.getText().toString().equalsIgnoreCase("") ) {
                 Intent in = new Intent(StartActivity.this, MainActivity.class);
                 in.putExtra("size", Integer.parseInt(etSize.getText().toString()));
                 in.putExtra("player1", player1.getText().toString());
                 in.putExtra("player2", player2.getText().toString());
                 startActivity(in);
                 finish();
+            } else {
+                Toast.makeText(this, "Enter Player name", Toast.LENGTH_SHORT).show();
             }
         }else{
-            Toast.makeText(StartActivity.this,"please input player name",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Enter Size of matrix less then 10", Toast.LENGTH_SHORT).show();
         }
+
     }
 }
